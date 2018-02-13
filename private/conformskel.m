@@ -2,7 +2,7 @@ function [conformstruc, skelldef] = conformskel(varargin )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 dbgmsg('Applies preconditioning functions to both training and validation datasets')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-addpath('precond/precondfun')
+
 test = false;
 skelldef = struct();
 extskeldef = struct();

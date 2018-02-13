@@ -6,7 +6,7 @@ cd ..
 addpath('utils_matlab')
 cd dsl
 
-addpath('precond')%,'poscond','measures','debug','utils');
+%addpath('precond')%,'poscond','measures','debug','utils');
 
 runpars = setrunpars;
 
@@ -18,3 +18,5 @@ for indexofscenes = 1:maxindexofscenes
     datavar = setdatavar(scene{indexofscenes},precon);
     datavar_(indexofscenes,:) = datavar.loop;
 end
+
+%rmpath('precond')
