@@ -19,5 +19,5 @@ for indexofscenes = 1:maxindexofscenes
     datavar = setdatavar(scene{indexofscenes},precon);
     datavar_(indexofscenes,:) = datavar.loop;
 end
-cd currpwd
+cd(currpwd)
 %rmpath('precond')
