@@ -18,7 +18,7 @@ if reset
    
     allc = [];
     clear allc_store
-    disp('allconfigs cleared')
+    disp('configs_d cleared')
     return
 end
 if isempty(allc_store)
@@ -44,14 +44,9 @@ if isempty(allc_store)
     allc.datavar.featuresall = 3;
     
     %% runpars
-    
-    allc.runpar.method = 'compressors';
+
     allc.runpar.scene = {'or'};% {'bathroom'};% {'bathroom','bedroom','kitchen','livingroom','office'} ; %{'or'}; %{'all'};
     allc.runpar.precon = 'oh';% 'pap';%'pop';% 'cip';
-    allc.runpar.savesimvar = false;
-    
-  
-    
  
     %% OS_VARS
     
