@@ -35,6 +35,7 @@ elseif ispc
             error('Could not find suitable save directory')
         end
     end
+    dbgmsg('Trying to find where git is. This may take a while.')
     [elel,cmdout1] = system('where /r \ git.exe');
     if any(strfind(cmdout1,'INFO:'))||elel
         error('cant find git.exe')

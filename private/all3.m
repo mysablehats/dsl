@@ -33,6 +33,7 @@ else
     [data, skelldef] = conformskel(data, datavar.preconditions{:});
 end
 if datavar.singleprecision
-    disp('hello')
+    dbgmsg('Changing data to single precision')
+    data.data = single(data.data);
 end
 end
