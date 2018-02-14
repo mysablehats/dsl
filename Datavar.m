@@ -29,6 +29,7 @@ classdef Datavar
         trialdatafile
         allmatpath
         scene
+        singleprecision
     end
     methods
         function datavar = Datavar(varargin)
@@ -42,6 +43,8 @@ classdef Datavar
             datavar.labels_names = []; % necessary so that same actions keep their order number
             datavar.disablesconformskel = 0;
             datavar.pc = 999;
+            
+            datavar.singleprecision = true;
             
             datavar.generatenewdataset = false;
             datavar.datasettype = 'Ext!';
