@@ -35,5 +35,7 @@ end
 if datavar.singleprecision
     dbgmsg('Changing data to single precision')
     data.data = single(data.data);
+    data.y = uint8(data.y);
+    data.index = uint32(data.index);
 end
 end
