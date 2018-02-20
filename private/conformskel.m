@@ -143,6 +143,12 @@ else
         
     end
     
+    if novel
+        skelldef.currlayer = 'pos';
+    else
+        skelldef.currlayer = 'all';
+    end
+    
     % execute them for training and validation sets
     if ~isempty(skelldef.bodyparts)
         for i = 1:length(conformations)

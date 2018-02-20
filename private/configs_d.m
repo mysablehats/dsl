@@ -46,7 +46,7 @@ if isempty(allc_store)
     %% runpars
 
     allc.runpar.scene = {'or'};% {'bathroom'};% {'bathroom','bedroom','kitchen','livingroom','office'} ; %{'or'}; %{'all'};
-    allc.runpar.precon = 'pap';% 'pap';%'pop';% 'cip';
+    allc.runpar.precon = 'oh';% 'pap';%'pop';% 'cip';
  
     %% OS_VARS
     
