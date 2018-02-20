@@ -143,7 +143,7 @@ else
         
     end
     
-    if novel
+    if skelldef.novel
         skelldef.currlayer = 'pos';
     else
         skelldef.currlayer = 'all';
