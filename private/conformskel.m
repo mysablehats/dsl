@@ -53,6 +53,8 @@ else
                     nonmatrixkilldim = nonmatrixkilldim_proposals;
                 case 'test'
                     test = true;
+                case 'bmirror'
+                    conformations = [conformations, {@bettermirror}];
                 case 'disthips'
                     conformations = [conformations, {@disthips}];
                     %warning('not implemented')

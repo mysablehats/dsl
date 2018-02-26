@@ -6,6 +6,7 @@ function datavar = setdatavar(scene,precon)
 makedata = true; %%% premature optimization
 only_hips = {'nohips'};
 parisi_preconditions = {'nohips','mirrorx'};
+bparisi_preconditions = {'nohips','bmirror'};
 cipiteli_preconditions = {'nohips','norm_cip','mirrorx'};
 polar_pc = {'nohips','mirrorx','polarC'};
 
@@ -23,6 +24,8 @@ switch precon
     case 'oh'
         preconCell = only_hips;
     case 'pap' 
+        preconCell = parisi_preconditions;
+    case 'papb'
         preconCell = parisi_preconditions;
     case 'cip'
         preconCell = cipiteli_preconditions;
