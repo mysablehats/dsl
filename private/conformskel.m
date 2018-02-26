@@ -156,7 +156,7 @@ else
         for i = 1:length(conformations)
             func = conformations{i};
             dbgmsg('Applying normalization: ', varargin{i+lindx-1},0);
-            if isequal(func, @mirrorx)||isequal(func,@mirrory)||isequal(func, @mirrorz)
+            if isequal(func, @mirrorx)||isequal(func,@mirrory)||isequal(func, @mirrorz)||isequal(func, @bmirror)
                 data_mirror = conformstruc.data;
                 data_ymirror = conformstruc.y;
                 data_imirror = conformstruc.index;

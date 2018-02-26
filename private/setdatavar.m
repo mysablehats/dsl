@@ -26,7 +26,7 @@ switch precon
     case 'pap' 
         preconCell = parisi_preconditions;
     case 'papb'
-        preconCell = parisi_preconditions;
+        preconCell = bparisi_preconditions;
     case 'cip'
         preconCell = cipiteli_preconditions;
     case 'pop'
