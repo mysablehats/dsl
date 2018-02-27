@@ -32,7 +32,7 @@ if isempty(allc_store)
     
     allc.datavar.AllSubjects = [1 2 3 4];%2 %[1 2 3 4]; %%
     allc.datavar.disablesconformskel = 0;
-    allc.datavar.generatenewdataset = false; %true;
+    allc.datavar.generatenewdataset = true; %true;
     allc.datavar.datasettype = 'CAD60'; % datasettypes are 'CAD60', 'tstv2' and 'stickman'
     allc.datavar.activity_type = 'act_type'; %'act_type' or 'act'
     allc.datavar.prefilter = {'none', 15};%{'filter',10}; % 'filter', 'none', 'median?'
