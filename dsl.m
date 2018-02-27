@@ -1,4 +1,9 @@
 function [datavar_, runpars] = dsl
+% loads dataset. Right now some features are broken and it is only loading
+% CAD-60 appropriately. 
+% to do: fix loading for other sets. 
+% add capacity to load other types of data?
+% add utils as submodule?
 
 configs_d('reset');
 
