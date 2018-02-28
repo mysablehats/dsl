@@ -160,10 +160,12 @@ else
                 data_mirror = conformstruc.data;
                 data_ymirror = conformstruc.y;
                 data_imirror = conformstruc.index;
+                data_emirror = conformstruc.ends;
             else
                 data_mirror = [];
                 data_ymirror = [];
                 data_imirror = [];
+                data_emirror = [];
             end
             
             if isequal(func,@normalize)||isequal(func,@normnorm)
@@ -231,6 +233,7 @@ else
             conformstruc.data = [conformstruc.data data_mirror];
             conformstruc.y = [conformstruc.y data_ymirror];
             conformstruc.index = [conformstruc.index data_imirror];
+            conformstruc.ends = [conformstruc.ends data_emirror];
         end
     end
     % squeeze them accordingly?
