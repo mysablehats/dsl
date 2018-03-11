@@ -45,7 +45,7 @@ else
     % this as well and I can maybe scrap my overly complex plotgwr and
     % drawskel...
     [skelldef.bodyparts, skelldef.conn] = genbodyparts(skelldef.length);
-    [skelldef.tlp.t, skelldef.tlp.l, skelldef.tlp.p] = btlp( skelldef.conn);
+    [skelldef.t, skelldef.l, skelldef.p] = btlp( skelldef.conn);
     
     % creates the function handle cell array
     conformations = {};
