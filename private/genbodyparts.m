@@ -170,7 +170,7 @@ switch lenlen
         setconn( 3,8);
         setconn( 10,11);
         setconn( 11,15);
-        setconn( 10,8);
+        %setconn( 10,8); let's avoid creating triangles, shall we?
         setconn( 8,9);
         setconn( 9,14);
     otherwise
