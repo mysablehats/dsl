@@ -40,7 +40,12 @@ else
     end
     
     %%%
-    skelldef.bodyparts = genbodyparts(skelldef.length);
+    % I am going to great the connection graph for the skeleton as well to
+    % be used by my new function. actually, plotting could be done like
+    % this as well and I can maybe scrap my overly complex plotgwr and
+    % drawskel...
+    [skelldef.bodyparts, skelldef.conn] = genbodyparts(skelldef.length);
+    [skelldef.t, skelldef.l, skelldef.p] = btlp( skelldef.conn);
     
     % creates the function handle cell array
     conformations = {};
