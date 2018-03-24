@@ -87,8 +87,10 @@ classdef Datavar
                     datavar.Alldata = 3;
                 case 'type2all'
                     datavar.Alldata = datavar.AllSubjects;
+                case 'type2_'
+                    datavar.Alldata = nan;
             end
-            if strcmp(datavar.validationtype,'type2')||strcmp(datavar.validationtype,'type2notrandom')||strcmp(datavar.validationtype,'type2all')
+            if strfind(datavar.validationtype,'type2')
                 datavar.sampling_type = 'type2';
                 %datavar.ValSubjectIndexes = {alldata};
                 %datavar.TrainSubjectIndexes = setdiff(1:4,[datavar.ValSubjectIndexes{:}]);
@@ -117,9 +119,8 @@ classdef Datavar
             datavartrial = repmat(datavar,datavar.featuresall*length(datavar.Alldata),1);
             for featuress = 1:datavar.featuresall
                 for valaction = datavar.Alldata %% iterate over different validation data
-                    if strcmp(datavar.validationtype,'type2')||strcmp(datavar.validationtype,'type2notrandom')||strcmp(datavar.validationtype,'type2all')
-                        
-                        datavar.ValSubjectIndexes = valaction;
+                    if strfind(datavar.validationtype,'type2')                        
+                        datavar.ValSubjectIndexes = intersect(valaction, datavar.AllSubjects); %% makes sure I won't have a subject on validation set that does not exist!
                         datavar.TrainSubjectIndexes = setdiff(datavar.AllSubjects,[datavar.ValSubjectIndexes]);
                     else
                         
