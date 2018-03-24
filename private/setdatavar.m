@@ -8,6 +8,7 @@ only_hips = {'nohips'};
 parisi_preconditions = {'nohips','mirrorx'};
 bparisi_preconditions = {'nohips','bmirror'};
 cipiteli_preconditions = {'nohips','norm_cip','mirrorx'};
+cipiteli_norm = {'nohips','norm_cip'};
 polar_pc = {'nohips','mirrorx','polarC'};
 
 extract_only_relevant = {'removeaction','still','random'};
@@ -29,6 +30,8 @@ switch precon
         preconCell = bparisi_preconditions;
     case 'cip'
         preconCell = cipiteli_preconditions;
+    case 'cipn'
+        preconCell = cipiteli_norm;
     case 'pop'
         preconCell = polar_pc;
     otherwise

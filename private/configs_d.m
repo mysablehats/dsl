@@ -24,11 +24,11 @@ end
 if isempty(allc_store)
     %% datavar
     
-    allc.datavar.init = {'validationtype' 'type2_'};
+    allc.datavar.init = {'validationtype' 'type2all'}; %'type2_'
     
     %starts the dataset and do the preconditioning and feature selection.
     
-    allc.datavar.validationtype = 'type2_'; %'type2notrandom'; 'cluster' 'quarterset' 'type2' 'type2notrandom' 'type2all'
+    allc.datavar.validationtype = 'type2all'; %'type2notrandom'; 'cluster' 'quarterset' 'type2' 'type2notrandom' 'type2all'
     
     allc.datavar.AllSubjects = [1 2 3 4];%2 %[1 2 3 4]; %%
     allc.datavar.disablesconformskel = 0;
@@ -46,7 +46,7 @@ if isempty(allc_store)
     %% runpars
 
     allc.runpar.scene = {'or'};% {'bathroom'};% {'bathroom','bedroom','kitchen','livingroom','office'} ; %{'or'}; %{'all'};
-    allc.runpar.precon = 'oh';%'papb';%'oh'; % 'pap';%'pop';% 'cip';
+    allc.runpar.precon = 'cipn';%'papb';%'oh'; % 'pap';%'pop';% 'cip';
  
     %% OS_VARS
     
