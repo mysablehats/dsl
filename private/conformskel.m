@@ -1,6 +1,6 @@
 function [conformstruc, skelldef] = conformskel(varargin )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-dbgmsg('Applies preconditioning functions to both training and validation datasets')
+dbgmsg('Applies preconditioning functions to dataset')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 test = false;

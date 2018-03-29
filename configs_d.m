@@ -24,7 +24,7 @@ end
 if isempty(allc_store)
     %% datavar
     
-    allc.datavar.init = {'validationtype' 'type2all'};
+    allc.datavar.init = {'validationtype' 'type2all'}; %'type2_'
     
     %starts the dataset and do the preconditioning and feature selection.
     
@@ -46,7 +46,7 @@ if isempty(allc_store)
     %% runpars
 
     allc.runpar.scene = {'or'};% {'bathroom'};% {'bathroom','bedroom','kitchen','livingroom','office'} ; %{'or'}; %{'all'};
-    allc.runpar.precon = 'oh';%'papb';%'oh'; % 'pap';%'pop';% 'cip';
+    allc.runpar.precon = 'cipn';%'papb';%'oh'; % 'pap';%'pop';% 'cip';
  
     %% OS_VARS
     
@@ -74,7 +74,11 @@ if isempty(allc_store)
     allc.aa.pc.env.homepath = '\Documents\\GitHub\\';
     allc.aa.pc.env.allmatpath = '\Dropbox\all.mat\';
     allc.aa.pc.env.windowsdrive = 'C:\';
+    allc.aa.pc.env.testdatapath = 'd:\dataset\all_sofar.mat';
+    
+    
     allc_store = allc;
+    
 else
     allc = allc_store;
 end

@@ -179,5 +179,14 @@ end
 %%%%%%
 % saves data
 %%%%%%
+if isempty(allskel2)
+    dbgmsg('Validation set is empty. Loading test data onto it')
+    allconfs = configs_d;
+    loadload = load(allconfs.aa.pc.env.testdatapath  );
+    [allskeli2, allskel2] = chunk_to_allskel(loadload.a);
+    % a = loadload.a;
+    %save('d:\dataset\all_sofar.mat','a')
+end
 
+dbgmsg('Indexes put on training and validation sets: allskeli1: ',num2str(allskeli1),' allskeli2:',num2str(allskeli2),1)
 end

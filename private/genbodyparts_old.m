@@ -44,12 +44,12 @@ switch lenlen
         bodyparts.RIGHT_ELBOW = bodyparts.WristLeft;
         bodyparts.LEFT_KNEE =  bodyparts.KneeLeft;
         bodyparts.RIGHT_KNEE = bodyparts.KneeRight;
-        bodyparts.RIGHT_FOOT =  bodyparts.FootRight;
-        bodyparts.LEFT_FOOT =  bodyparts.FootLeft;
+        bodyparts.RIGHT_FOOT =  [bodyparts.AnkleRight,	 bodyparts.FootRight];
+        bodyparts.LEFT_FOOT =  [bodyparts.AnkleLeft,	 bodyparts.FootLeft];
         bodyparts.HEAD	=	 bodyparts.Head;
         bodyparts.TORSO = bodyparts.SpineShoulder;
-        bodyparts.RIGHT_HAND = bodyparts.HandTipRight;
-        bodyparts.LEFT_HAND = bodyparts.HandTipLeft;
+        bodyparts.RIGHT_HAND = [bodyparts.HandTipRight bodyparts.ThumbRight];
+        bodyparts.LEFT_HAND = [bodyparts.HandTipLeft bodyparts.ThumbLeft];
         
         setconn( 1,2);        
         setconn( 2,21);
@@ -113,10 +113,10 @@ switch lenlen
         bodyparts.LEFT_KNEE = bodyparts.knee_left;
         bodyparts.RIGHT_HIP = bodyparts.hip_right;
         bodyparts.RIGHT_KNEE = bodyparts.knee_right;
-        bodyparts.LEFT_HAND = bodyparts.hand_left;
-        bodyparts.RIGHT_HAND = bodyparts.hand_right;
-        bodyparts.LEFT_FOOT =  bodyparts.foot_left;
-        bodyparts.RIGHT_FOOT =  bodyparts.foot_right;
+        bodyparts.LEFT_HAND = [bodyparts.wrist_left, bodyparts.hand_left];
+        bodyparts.RIGHT_HAND = [bodyparts.wrist_right, bodyparts.hand_right];
+        bodyparts.LEFT_FOOT =  [bodyparts.ankle_left,	 bodyparts.foot_left];
+        bodyparts.RIGHT_FOOT =  [bodyparts.ankle_right,	 bodyparts.foot_right];
         
         setconn( 1,2);
         setconn( 2,3);
